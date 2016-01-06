@@ -8,14 +8,20 @@
 
 <body>
 	<title>要优雅 不要污</title>
-	<img src="sb2.jpg" alt="翻车了吗" ng-init="wu=true;" ng-show="false"></img>
-	<br/>
-	<a href="http://shaolongm17x.github.io" ng-mousemove="wu=!wu;" ng-mouseleave="wu=false;">
-		<button type="button" class="btn btn-primary">警察叔叔就是这个人 -></button>
-	</a> 
+	<div ng-app="wuApp" ng-controller="wuCtrl">
+		<img src="sb2.jpg" alt="翻车了吗" ng-init="$scope.wu=false;" ng-show="!$scope.wu"></img>
+		<br/>
+		<a href="http://shaolongm17x.github.io">
+			<button type="button" class="btn btn-primary" ng-mousemove="$scope.wu=!$scope.wu;" ng-mouseleave="$scope.wu=false;">
+				警察叔叔就是这个人 ->
+			</button>
+		</a> 
+	</div>
 	
 	<script>
-	
+	var app = angular.module('wuApp', []);
+	app.controller('wuCtrl', function($scope) {
+	});
 	</script>
 </body>
 </html>
