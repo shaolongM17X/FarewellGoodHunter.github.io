@@ -21,7 +21,10 @@
 	
 	<script>
 	var app = angular.module('wuApp', []);
-	app.controller('wuCtrl', function($scope) {
+	app.controller('wuCtrl', function($scope, $interval) {
+		var clean = interval(function() {
+			$scope.wu=false;
+		}, 100);
 	});
 	</script>
 </body>
