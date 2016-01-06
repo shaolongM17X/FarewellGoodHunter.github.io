@@ -8,10 +8,15 @@
 
 <body>
 	<title>要优雅 不要污</title>
-	<img src="sb2.jpg" alt="翻车了吗"></img>
+	<img src="sb2.jpg" alt="翻车了吗" ng-show="!$scope.wu"></img>
+	<img src="doge1.jpg" alt="精神污染" ng-show="$scope.wu"></img>
 	<br/>
-	<a href="http://shaolongm17x.github.io">
+	<a href="http://shaolongm17x.github.io" ng-mousemove="$scope.wu=!$scope.wu;" ng-mouseleave="$scope.wu=false;">
 		<button type="button" class="btn btn-primary">警察叔叔就是这个人 -></button>
-	</a>
+	</a> 
+	
+	<script>
+	
+	</script>
 </body>
 </html>
