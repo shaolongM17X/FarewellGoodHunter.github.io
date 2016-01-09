@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="gitStyle.css">
 	<title>Sign in to GitHub - GitHub</title>
 </head>
-<body style="background-color: #F9F9F9; z-index: 1000;" ng-app="gitFaker"" ng-controller="fakerCtrl">
+<body style="background-color: #F9F9F9;" ng-app="gitFaker"" ng-controller="fakerCtrl">
 	<div id="login_page" ng-show="!inputing">
 		<div class="iconContainer">
 			<img class="icon48" src="github_icon48.png" alt="icon48"></img>
@@ -53,7 +53,7 @@
 		</div>
 	</div>
 	
-	<div ng-show="inputing" style="z-index: 10;">
+	<div ng-show="inputing" ng-style="!inputing && {'dispaly': 'none'}">
 		<div class="image" style="position: relative; width: 100%;">
 			<img src="sb3.JPG" alt="夕立" />
 			<h2 style="position: absolute; width: 100%; top: 125px; left: 20px;">{{usrName}}<br/>{{pswd}}</h2>
