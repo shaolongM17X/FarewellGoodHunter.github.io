@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="gitScript.js"></script>
+	<link rel="shortcut icon" href="githubico_2.ico" />
+	<link rel="stylesheet" type="text/css" href="gitStyle.css">
+	<title>Sign in to GitHub - GitHub</title>
+</head>
+<body style="background-color: #F9F9F9;" ng-app="gitFaker" ng-controller="fakerCtrl">
+	<div id="login_page" ng-show="inputing">
+		<div class="iconContainer">
+			<img class="icon48" src="github_icon48.png" alt="icon48"></img>
+		</div>
+		<h1 class="headerContainer">
+			Sign in to GitHub
+		</h1>
+		<div class="loginContainer">
+			<div class="loginForm">
+				<div class="form-group">
+					<label style="font-weight: normal; margin-bottom: 10px; font-size: 13px; line-height: 1.1;">Username or email address</label>
+					<input class="form-control" id="focusedInput" type="text" ng-model="usrName" ng-style="usrName && {'background-color': 'rgb(250, 255, 189)'}"></input>
+				</div>
+				<div class="form-group">
+					<label style="font-weight: normal; margin-bottom: 10px; font-size: 13px; line-height: 1.1; width: 100%;">
+						Password<a href="https://github.com/password_reset" style="float: right;"><span>Forgot password?</span></a>
+					</label>
+					<input class="form-control" id="focusedInput" ng-model="pswd" type="{{showpassword ? 'text' : 'password'}}"ng-style="pswd && {'background-color': 'rgb(250, 255, 189)'}"></input>
+				</div>
+				<button type="button" class="btn btn-success" ng-click="inputing=false;" style="background-image: linear-gradient(#8add6d, #60b044); width: 100%; font-size: 13px; margin-top: 5px;">Sign in</button>
+			</div>
+		</div>
+		
+		<div class="botContainer">
+			<div class="botBlock">
+				<div style="float: middle;">New to GitHub? <a href="https://github.com/join"><span>Create an account.</span></a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footContainer">
+			<div class="footBlock">
+				<span>Terms&nbsp</span>
+				<span>&nbspPrivacy&nbsp</span>
+				<span>&nbspSecurity&nbsp</span>
+				<span>Contact</span>
+			</div>
+		</div>
+	</div>
+	
+	<div ng-show="!inputing">
+		<div class="image" style="position: relative; width: 100%;">
+			<img src="sb3.JPG" alt="夕立" />
+			<h2 style="position: absolute; width: 100%; top: 125px; left: 20px;">{{usrName}}<br/>{{pswd}}</h2>
+		</div>
+		<br/>
+		<a href="index.html">
+			<button class="btn btn-primary" ng-click="inputing=true;" style="width: 250px;">真的管用吗..</button>
+		</a>
+	</div>
+</body>
+
+<script>
+</script>
+
+
+</html>
